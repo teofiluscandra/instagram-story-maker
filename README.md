@@ -1,5 +1,4 @@
-# Instagram Story Maker [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
-[![Build Status](https://travis-ci.org/teofiluscandra/instagram-story-maker.png?branch=master)](https://travis-ci.org/teofiluscandra/instagram-story-maker)
+# Instagram Story Maker [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) [![Build Status](https://travis-ci.org/teofiluscandra/instagram-story-maker.png?branch=master)](https://travis-ci.org/teofiluscandra/instagram-story-maker)
 
 
 > Generate random picture and combine it with sentences from user input

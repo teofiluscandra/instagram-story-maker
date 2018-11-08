@@ -33,7 +33,7 @@
     "type": "git",
     "url": "git@github.com:teofiluscandra/instagram-story-maker.git"
   },
-  "jest" : {
-    "verbose" : true
+  "jest": {
+    "verbose": true
   }
 }

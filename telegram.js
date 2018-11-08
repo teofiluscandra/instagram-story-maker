@@ -81,7 +81,7 @@ bot.action('make', (ctx) => {
     bot.on('message', (ctx) => {
         storyMaker(ctx.message.text).then(()=>{
             return ctx.replyWithPhoto({
-                url: "https://instagram-story-maker.herokuapp.com/photo-edited.jpg",
+                url: "http://117.53.46.40:5001/photo-edited.jpg",
                 caption : "Cool! Hahahaha",
                 reply_to_message_id: ctx.message.message_id
             })
@@ -99,7 +99,3 @@ bot.on(['sticker', 'photo'], (ctx) => {
 
 bot.startPolling()
 
-//ping heroku every 15 minutes
-setInterval(function() {
-    http.get("http://instagram-story-maker.herokuapp.com/");
-}, 900000);

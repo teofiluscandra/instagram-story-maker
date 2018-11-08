@@ -81,7 +81,7 @@ bot.action('make', (ctx) => {
     bot.on('message', (ctx) => {
         storyMaker(ctx.message.text).then((result)=>{ 
             return ctx.replyWithPhoto({
-                url: `${process.env.BASE_URL}/edited/photo-${result.data.timestamp}.jpg`,
+                url: `${process.env.BASE_URL}/photo-${result.data.timestamp}.jpg`,
                 caption : "Cool! Hahahaha",
                 reply_to_message_id: ctx.message.message_id
             })

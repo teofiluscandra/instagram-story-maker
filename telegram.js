@@ -79,9 +79,9 @@ bot.help((ctx) => ctx.reply('Ketik /make , ketik kalimat dan gunakan'))
 bot.action('make', (ctx) => {
     ctx.reply('Apa kalimat untuk instagram?')
     bot.on('message', (ctx) => {
-        storyMaker(ctx.message.text).then(()=>{
+        storyMaker(ctx.message.text).then((result)=>{ 
             return ctx.replyWithPhoto({
-                url: "http://117.53.46.40:5001/photo-edited.jpg",
+                url: `${process.env.BASE_URL}/edited/photo-${result.data.timestamp}.jpg`,
                 caption : "Cool! Hahahaha",
                 reply_to_message_id: ctx.message.message_id
             })

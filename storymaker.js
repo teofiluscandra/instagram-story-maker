@@ -9,7 +9,7 @@ export function storyMaker(answer){
     //sentence = answer
     console.log(`Wait until process done`)
     let font = jimp.FONT_SANS_64_WHITE  
-
+    const timestamp = Date.now()
     //download random natural photo
     const options = {
       url : 'https://picsum.photos/540/960/?random',
@@ -24,12 +24,17 @@ export function storyMaker(answer){
               photo.brightness(-0.5)
                     .blur(1)
                     .print(font, 20, 20, answer,1)
-                    .write('edited/photo-edited.jpg')
-            }) 
-            database.sentences.push({"username": "", "answer": answer});            
-            fs.writeFile("database/sentence.json", JSON.stringify(database), function(){
-              resolve("success")
-            })           
+                    .write(`edited/photo-${timestamp}.jpg`)
+              database.sentences.push({"username": "", "answer": answer});            
+              fs.writeFile("database/sentence.json", JSON.stringify(database), function(){
+                resolve({
+                  status : 1,
+                  data : {
+                    timestamp : timestamp
+                  }
+                })
+              })  
+            })         
           })
           .catch((err) => {
             reject(err)
